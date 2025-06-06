@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define TAM 100 
-
+//oi tudo bem
 typedef enum { 
     CAMISETA = 1,
     CALCA,
@@ -22,7 +22,7 @@ int qtd = 0;
 
 void mostrarCategorias() {
     printf("1) Camiseta\n");
-    printf("2) Calça\n");
+    printf("2) Calï¿½a\n");
     printf("3) Jaqueta\n");
     printf("4) Short\n");
     printf("5) Vestido\n");
@@ -49,7 +49,7 @@ void adicionarRoupa() {
     printf("Escolha a categoria (1-5): ");
     scanf("%d", (int*)&nova.categoria);
 
-    printf("Preço da roupa: R$ ");
+    printf("Preï¿½o da roupa: R$ ");
     scanf("%f", &nova.preco); 
 
     estoque[qtd++] = nova; 
@@ -82,14 +82,14 @@ void listarRoupas() {
 
         switch (cat) {
             case CAMISETA: printf("Camiseta\n"); break; 
-            case CALCA: printf("Calça\n"); break; 
+            case CALCA: printf("Calï¿½a\n"); break; 
             case JAQUETA: printf("Jaqueta\n"); break;
             case SHORT: printf("Short\n"); break;
             case VESTIDO: printf("Vestido\n"); break;
             default: printf("Desconhecida\n");
         }
 
-        printf("Preço: R$ %.2f\n\n", preco);
+        printf("Preï¿½o: R$ %.2f\n\n", preco);
     }
 
     fclose(arquivo);
@@ -110,9 +110,9 @@ void ordenarPorPreco() {
         }
     }
 
-    printf("\n- ROUPAS ORDENADAS POR PREÇO -\n");
+    printf("\n- ROUPAS ORDENADAS POR PREï¿½O -\n");
     for (i = 0; i < qtd; i++) {
-        printf("Nome: %s | Preço: R$ %.2f\n", estoque[i].nome, estoque[i].preco);
+        printf("Nome: %s | Preï¿½o: R$ %.2f\n", estoque[i].nome, estoque[i].preco);
     }
     system("pause");
 }
@@ -128,9 +128,9 @@ int main() {
         printf("- LOJA DE ROUPAS -\n");
         printf("1) Adicionar roupa ao estoque\n"); 
         printf("2) Listar roupas\n");
-        printf("3) Ordenar por preço (Bubble Sort)\n");
+        printf("3) Ordenar por preï¿½o (Bubble Sort)\n");
         printf("4) Sair\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opï¿½ï¿½o: ");
         scanf("%d", &opcao); 
 
         switch (opcao) { 
@@ -147,7 +147,7 @@ int main() {
                 printf("Saindo...\n");
                 break;
             default:
-                printf("Opção inválida!\n");
+                printf("Opï¿½ï¿½o invï¿½lida!\n");
                 system("pause"); 
         }
 
